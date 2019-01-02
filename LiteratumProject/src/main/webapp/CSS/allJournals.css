@@ -1,0 +1,11 @@
+.jumbotron{
+    border-radius: 50px;
+    background: url("https://images.pexels.com/photos/860379/pexels-photo-860379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.browse{
+    padding-top: 40px;
+}
+

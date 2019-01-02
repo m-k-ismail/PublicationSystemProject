@@ -1,0 +1,180 @@
+
+        <!ELEMENT article (front|body|back)*>
+        <!ATTLIST article
+                xmlns:mml CDATA #REQUIRED
+                xmlns:xlink CDATA #REQUIRED
+                article-type CDATA #REQUIRED
+                dtd-version CDATA #REQUIRED
+                xml:lang CDATA #REQUIRED>
+        <!ELEMENT front (journal-meta|article-meta)*>
+        <!ELEMENT journal-meta (journal-id|journal-title-group|issn|publisher)*>
+        <!ELEMENT journal-id (#PCDATA)>
+        <!ATTLIST journal-id
+                journal-id-type CDATA #REQUIRED>
+        <!ELEMENT journal-title-group (journal-title)*>
+        <!ELEMENT journal-title (#PCDATA)>
+        <!ELEMENT issn (#PCDATA)>
+        <!ATTLIST issn
+                pub-type CDATA #REQUIRED>
+        <!ELEMENT publisher (publisher-name|publisher-loc)*>
+        <!ELEMENT publisher-name (#PCDATA)>
+        <!ELEMENT publisher-loc (#PCDATA)>
+        <!ELEMENT article-meta (article-id|article-categories|title-group|contrib-group|aff|author-notes|pub-date|volume|issue|fpage|lpage|permissions|self-uri|abstract|kwd-group)*>
+        <!ELEMENT article-id (#PCDATA)>
+        <!ATTLIST article-id
+                pub-id-type CDATA #REQUIRED>
+        <!ELEMENT article-categories (subj-group)*>
+        <!ELEMENT subj-group (subject)*>
+        <!ATTLIST subj-group
+                subj-group-type CDATA #REQUIRED>
+        <!ELEMENT subject (#PCDATA)>
+        <!ELEMENT title-group (article-title)*>
+        <!ELEMENT article-title (#PCDATA)>
+        <!ELEMENT contrib-group (contrib|x)*>
+        <!ELEMENT contrib (string-name|x|degrees|xref)*>
+        <!ATTLIST contrib
+                contrib-type CDATA #REQUIRED>
+        <!ELEMENT string-name (given-names|surname|suffix)*>
+        <!ELEMENT given-names (#PCDATA)>
+        <!ELEMENT surname (#PCDATA)>
+        <!ELEMENT x (#PCDATA)>
+        <!ELEMENT degrees (#PCDATA)>
+        <!ELEMENT xref (sup)*>
+        <!ATTLIST xref
+                ref-type CDATA #REQUIRED
+                rid CDATA #REQUIRED>
+        <!ELEMENT sup (#PCDATA)>
+        <!ELEMENT aff (label)*>
+        <!ATTLIST aff
+                id CDATA #REQUIRED>
+        <!ELEMENT label (sup)*>
+        <!ELEMENT author-notes (corresp)*>
+        <!ELEMENT corresp (email)*>
+        <!ATTLIST corresp
+                id CDATA #REQUIRED>
+        <!ELEMENT email (#PCDATA)>
+        <!ELEMENT pub-date (month|year)*>
+        <!ATTLIST pub-date
+                pub-type CDATA #REQUIRED>
+        <!ELEMENT month (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT volume (#PCDATA)>
+        <!ELEMENT issue (#PCDATA)>
+        <!ELEMENT fpage (#PCDATA)>
+        <!ELEMENT lpage (#PCDATA)>
+        <!ELEMENT permissions (copyright-statement|copyright-year|copyright-holder)*>
+        <!ELEMENT copyright-statement (#PCDATA)>
+        <!ELEMENT copyright-year (#PCDATA)>
+        <!ELEMENT copyright-holder (#PCDATA)>
+        <!ATTLIST copyright-holder
+                content-type CDATA #REQUIRED>
+        <!ELEMENT self-uri (#PCDATA)>
+        <!ATTLIST self-uri
+                content-type CDATA #REQUIRED
+                xlink:href CDATA #REQUIRED>
+        <!ELEMENT abstract (p)*>
+        <!ELEMENT p (xref|italic|bold|disp-formula|sub|inline-formula|sup)*>
+        <!ELEMENT kwd-group (kwd|x)*>
+        <!ELEMENT kwd (#PCDATA)>
+        <!ELEMENT body (p|sec)*>
+        <!ELEMENT sec (title|p|list|sec|table-wrap)*>
+        <!ATTLIST sec
+                id CDATA #REQUIRED
+                sec-type CDATA #IMPLIED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT italic (sub)*>
+        <!ELEMENT list (list-item)*>
+        <!ATTLIST list
+                id CDATA #REQUIRED
+                list-type CDATA #REQUIRED>
+        <!ELEMENT list-item (p)*>
+        <!ELEMENT bold (#PCDATA)>
+        <!ELEMENT table-wrap (label|caption|alternatives|table-wrap-foot)*>
+        <!ATTLIST table-wrap
+                id CDATA #REQUIRED
+                position CDATA #REQUIRED>
+        <!ELEMENT caption (p)*>
+        <!ELEMENT alternatives (graphic|table|mml:math)*>
+        <!ELEMENT graphic (#PCDATA)>
+        <!ATTLIST graphic
+                xlink:href CDATA #REQUIRED>
+        <!ELEMENT table (colgroup|thead|tbody)*>
+        <!ELEMENT colgroup (col)*>
+        <!ELEMENT col (#PCDATA)>
+        <!ATTLIST col
+                align CDATA #REQUIRED
+                char CDATA #IMPLIED>
+        <!ELEMENT thead (tr)*>
+        <!ELEMENT tr (th|td)*>
+        <!ELEMENT th (hr|italic)*>
+        <!ATTLIST th
+                align CDATA #IMPLIED
+                colspan CDATA #IMPLIED
+                rowspan CDATA #IMPLIED>
+        <!ELEMENT hr (#PCDATA)>
+        <!ELEMENT tbody (tr)*>
+        <!ELEMENT td (xref|break)*>
+        <!ATTLIST td
+                colspan CDATA #IMPLIED>
+        <!ELEMENT table-wrap-foot (fn)*>
+        <!ELEMENT fn (p|label)*>
+        <!ATTLIST fn
+                fn-type CDATA #IMPLIED
+                id CDATA #IMPLIED>
+        <!ELEMENT disp-formula (label|alternatives)*>
+        <!ATTLIST disp-formula
+                id CDATA #REQUIRED>
+        <!ELEMENT mml:math (mml:mrow|mml:mtable)*>
+        <!ATTLIST mml:math
+                display CDATA #REQUIRED
+                id CDATA #REQUIRED>
+        <!ELEMENT mml:mrow (mml:mi|mml:mo|mml:msub|mml:mn|mml:msup|mml:mrow|mml:mfrac|mml:mspace|mml:msubsup)*>
+        <!ELEMENT mml:mi (#PCDATA)>
+        <!ELEMENT mml:mo (#PCDATA)>
+        <!ATTLIST mml:mo
+                stretchy CDATA #IMPLIED>
+        <!ELEMENT mml:msub (mml:mi|mml:mn|mml:mrow)*>
+        <!ELEMENT mml:mn (#PCDATA)>
+        <!ELEMENT sub (italic)*>
+        <!ELEMENT mml:msup (mml:mi|mml:mo)*>
+        <!ELEMENT mml:mfrac (mml:mn|mml:mrow)*>
+        <!ELEMENT mml:mspace (#PCDATA)>
+        <!ATTLIST mml:mspace
+                width CDATA #REQUIRED>
+        <!ELEMENT inline-formula (mml:math)*>
+        <!ATTLIST inline-formula
+                id CDATA #REQUIRED>
+        <!ELEMENT mml:msubsup (mml:mi|mml:mo)*>
+        <!ELEMENT mml:mtable (mml:mtr)*>
+        <!ATTLIST mml:mtable
+                columnalign CDATA #REQUIRED>
+        <!ELEMENT mml:mtr (mml:mtd)*>
+        <!ELEMENT mml:mtd (mml:mi|mml:mrow|mml:mo|mml:msub|mml:mspace)*>
+        <!ELEMENT break (#PCDATA)>
+        <!ELEMENT back (fn-group|notes|ref-list)*>
+        <!ELEMENT fn-group (fn)*>
+        <!ELEMENT notes (fn-group)*>
+        <!ELEMENT ref-list (title|ref)*>
+        <!ELEMENT ref (mixed-citation)*>
+        <!ATTLIST ref
+                id CDATA #REQUIRED>
+        <!ELEMENT mixed-citation (person-group|year|source|publisher-loc|publisher-name|collab|ext-link|article-title|volume|fpage|lpage|pub-id|month|edition|conf-name|conf-loc|day|issue)*>
+        <!ATTLIST mixed-citation
+                publication-type CDATA #REQUIRED>
+        <!ELEMENT person-group (string-name)*>
+        <!ATTLIST person-group
+                person-group-type CDATA #REQUIRED>
+        <!ELEMENT source (#PCDATA)>
+        <!ELEMENT collab (#PCDATA)>
+        <!ELEMENT ext-link (#PCDATA)>
+        <!ATTLIST ext-link
+                ext-link-type CDATA #REQUIRED
+                xlink:href CDATA #REQUIRED>
+        <!ELEMENT pub-id (#PCDATA)>
+        <!ATTLIST pub-id
+                pub-id-type CDATA #REQUIRED>
+        <!ELEMENT edition (#PCDATA)>
+        <!ELEMENT suffix (#PCDATA)>
+        <!ELEMENT conf-name (#PCDATA)>
+        <!ELEMENT conf-loc (#PCDATA)>
+        <!ELEMENT day (#PCDATA)>

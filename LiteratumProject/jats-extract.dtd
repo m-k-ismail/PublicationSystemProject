@@ -1,0 +1,35 @@
+        <!ELEMENT issue-xml (journal-meta|issue-meta|toc)*>
+        <!ELEMENT journal-meta (journal-id|journal-title-group|issn|publisher)*>
+        <!ELEMENT journal-id (#PCDATA)>
+        <!ATTLIST journal-id
+                journal-id-type CDATA #REQUIRED>
+        <!ELEMENT journal-title-group (journal-title)*>
+        <!ELEMENT journal-title (#PCDATA)>
+        <!ELEMENT issn (#PCDATA)>
+        <!ATTLIST issn
+                pub-type CDATA #REQUIRED>
+        <!ELEMENT publisher (publisher-name)*>
+        <!ELEMENT publisher-name (#PCDATA)>
+        <!ELEMENT issue-meta (pub-date|volume|issue|issue-id)*>
+        <!ATTLIST issue-meta
+                issue-type CDATA #REQUIRED>
+        <!ELEMENT pub-date (month|year)*>
+        <!ATTLIST pub-date
+                pub-type CDATA #REQUIRED>
+        <!ELEMENT month (#PCDATA)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT volume (#PCDATA)>
+        <!ELEMENT issue (#PCDATA)>
+        <!ELEMENT issue-id (#PCDATA)>
+        <!ATTLIST issue-id
+                pub-id-type CDATA #REQUIRED>
+        <!ELEMENT toc (issue-subject-group)*>
+        <!ATTLIST toc
+                toc-type CDATA #REQUIRED>
+        <!ELEMENT issue-subject-group (issue-subject-title|issue-article-meta|issue-subject-group)*>
+        <!ELEMENT issue-subject-title (subject)*>
+        <!ELEMENT subject (#PCDATA)>
+        <!ELEMENT issue-article-meta (article-id)*>
+        <!ELEMENT article-id (#PCDATA)>
+        <!ATTLIST article-id
+                pub-id-type CDATA #REQUIRED>
